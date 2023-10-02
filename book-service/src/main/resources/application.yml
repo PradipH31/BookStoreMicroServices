@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://<username>:<pwd>@<cluster>.mongodb.net/mydatabase
+server:
+  port: 8080  # Port on which your Spring Boot application will run
