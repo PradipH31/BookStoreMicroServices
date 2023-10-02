@@ -3,5 +3,3 @@ spring:
     mongodb:
       uri: mongodb+srv://<username>:<pwd>@<cluster>.mongodb.net/mydatabase
       authentication-database: admin
-server:
-  port: 8081

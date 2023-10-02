@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  book-service:
+    image: pradiph31/book-service
+    container_name: book-service
+  review-service:
+    image: pradiph31/review-service
+    container_name: review-service
+  composite-service:
+    image: pradiph31/composite-service:2.0.0
+    ports:
+      - 8080:8080
+    container_name: composite-service
+    depends_on:
+      - book-service
+      - review-service

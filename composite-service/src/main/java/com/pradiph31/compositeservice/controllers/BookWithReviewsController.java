@@ -22,12 +22,12 @@ public class BookWithReviewsController {
         Mono<Book> bookMono =
                 webClientBuilder.build()
                         .get()
-                        .uri("http://localhost:8081/{id}", id)
+                        .uri("http://book-service:8080/{id}", id)
                         .retrieve()
                         .bodyToMono(Book.class);
         Flux<Review> reviewsFlux = webClientBuilder.build()
                 .get()
-                .uri("http://localhost:8082/{id}", id)
+                .uri("http://review-service:8080/{id}", id)
                 .retrieve()
                 .bodyToFlux(Review.class);
         return bookMono
