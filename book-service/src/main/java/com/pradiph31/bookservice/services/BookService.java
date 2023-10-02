@@ -7,5 +7,4 @@ import reactor.core.publisher.Mono;
 public interface BookService {
     Flux<Book> findAll();
     Mono<Book> findById(Long id);
-    Mono<Void> save(Mono<Book> book);
 }
